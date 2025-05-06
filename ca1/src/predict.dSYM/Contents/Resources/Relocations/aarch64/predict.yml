@@ -1,0 +1,52 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     predict
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: __ZN4Tage4initEv, symObjAddr: 0x0, symBinAddr: 0x10000156C, symSize: 0x1E8 }
+  - { offset: 0x4D7, size: 0x8, addend: 0x0, symName: __ZN4Tage4initEv, symObjAddr: 0x0, symBinAddr: 0x10000156C, symSize: 0x1E8 }
+  - { offset: 0x57E, size: 0x8, addend: 0x0, symName: __ZN4Tage14get_predictionEyi, symObjAddr: 0x1E8, symBinAddr: 0x100001754, symSize: 0x6C }
+  - { offset: 0x612, size: 0x8, addend: 0x0, symName: __ZN4Tage19get_predictor_indexEyi, symObjAddr: 0x25C, symBinAddr: 0x1000017C8, symSize: 0x128 }
+  - { offset: 0x780, size: 0x8, addend: 0x0, symName: __ZN4Tage17get_bimodal_indexEy, symObjAddr: 0x254, symBinAddr: 0x1000017C0, symSize: 0x8 }
+  - { offset: 0x9E7, size: 0x8, addend: 0x0, symName: __ZN4Tage7predictEy, symObjAddr: 0x384, symBinAddr: 0x1000018F0, symSize: 0x944 }
+  - { offset: 0xEC9, size: 0x8, addend: 0x0, symName: __ZN4Tage17get_match_below_nEyi, symObjAddr: 0xCC8, symBinAddr: 0x100002234, symSize: 0x140 }
+  - { offset: 0x1038, size: 0x8, addend: 0x0, symName: __ZN4Tage10ctr_updateERhiii, symObjAddr: 0xE08, symBinAddr: 0x100002374, symSize: 0x30 }
+  - { offset: 0x10F6, size: 0x8, addend: 0x0, symName: __ZN4Tage6updateEyb, symObjAddr: 0xE38, symBinAddr: 0x1000023A4, symSize: 0x6D8 }
+  - { offset: 0x162A, size: 0x8, addend: 0x0, symName: __ZN4Tage7get_tagEyi, symObjAddr: 0x1510, symBinAddr: 0x100002A7C, symSize: 0xC4 }
+  - { offset: 0x1716, size: 0x8, addend: 0x0, symName: __ZN4Tage21get_path_history_hashEi, symObjAddr: 0x15D4, symBinAddr: 0x100002B40, symSize: 0x90 }
+  - { offset: 0x1781, size: 0x8, addend: 0x0, symName: __ZN4Tage29get_compressed_global_historyEii, symObjAddr: 0x1664, symBinAddr: 0x100002BD0, symSize: 0xD0 }
+  - { offset: 0x18B4, size: 0x8, addend: 0x0, symName: __ZN4TageC2Ev, symObjAddr: 0x1734, symBinAddr: 0x100002CA0, symSize: 0x78 }
+  - { offset: 0x19A9, size: 0x8, addend: 0x0, symName: __ZN4TageC1Ev, symObjAddr: 0x17AC, symBinAddr: 0x100002D18, symSize: 0x78 }
+  - { offset: 0x1A9B, size: 0x8, addend: 0x0, symName: __ZN4TageD2Ev, symObjAddr: 0x1824, symBinAddr: 0x100002D90, symSize: 0x40 }
+  - { offset: 0x1B4C, size: 0x8, addend: 0x0, symName: __ZN4TageD1Ev, symObjAddr: 0x1864, symBinAddr: 0x100002DD0, symSize: 0x40 }
+  - { offset: 0x1D93, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x18A4, symBinAddr: 0x100002E10, symSize: 0x138 }
+  - { offset: 0x1F23, size: 0x8, addend: 0x0, symName: __ZN12my_predictorC2Ev, symObjAddr: 0x19DC, symBinAddr: 0x100002F48, symSize: 0x24C }
+  - { offset: 0x23FE, size: 0x8, addend: 0x0, symName: __ZN12my_predictor7predictER11branch_info, symObjAddr: 0x1C28, symBinAddr: 0x100003194, symSize: 0x74 }
+  - { offset: 0x24BF, size: 0x8, addend: 0x0, symName: __ZN12my_predictor6updateEP13branch_updatebj, symObjAddr: 0x1C9C, symBinAddr: 0x100003208, symSize: 0x34 }
+  - { offset: 0x2561, size: 0x8, addend: 0x0, symName: __ZN12my_predictorD1Ev, symObjAddr: 0x1CD0, symBinAddr: 0x10000323C, symSize: 0x50 }
+  - { offset: 0x266B, size: 0x8, addend: 0x0, symName: __ZN12my_predictorD0Ev, symObjAddr: 0x1D20, symBinAddr: 0x10000328C, symSize: 0x50 }
+  - { offset: 0x27CF, size: 0x8, addend: 0x0, symName: _tracefp, symObjAddr: 0x3E38, symBinAddr: 0x100008008, symSize: 0x0 }
+  - { offset: 0x29AD, size: 0x8, addend: 0x0, symName: _buf, symObjAddr: 0x3E40, symBinAddr: 0x100008010, symSize: 0x0 }
+  - { offset: 0x29CF, size: 0x8, addend: 0x0, symName: _bufpos, symObjAddr: 0x6550, symBinAddr: 0x10000A720, symSize: 0x0 }
+  - { offset: 0x29EB, size: 0x8, addend: 0x0, symName: _bufsize, symObjAddr: 0x6554, symBinAddr: 0x10000A724, symSize: 0x0 }
+  - { offset: 0x2A00, size: 0x8, addend: 0x0, symName: _end_of_file, symObjAddr: 0x6558, symBinAddr: 0x10000A728, symSize: 0x0 }
+  - { offset: 0x2A1C, size: 0x8, addend: 0x0, symName: _ras, symObjAddr: 0x655C, symBinAddr: 0x10000A72C, symSize: 0x0 }
+  - { offset: 0x2A3D, size: 0x8, addend: 0x0, symName: _ras_top, symObjAddr: 0xA34, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x2A52, size: 0x8, addend: 0x0, symName: _rtab, symObjAddr: 0x66EC, symBinAddr: 0x10000A8BC, symSize: 0x0 }
+  - { offset: 0x2AF8, size: 0x8, addend: 0x0, symName: __MergedGlobals, symObjAddr: 0x8066EC, symBinAddr: 0x10080A8BC, symSize: 0x0 }
+  - { offset: 0x2B07, size: 0x8, addend: 0x0, symName: __Z10read_tracev, symObjAddr: 0x3BC, symBinAddr: 0x100003698, symSize: 0x444 }
+  - { offset: 0x2B30, size: 0x8, addend: 0x0, symName: __MergedGlobals, symObjAddr: 0x8066EC, symBinAddr: 0x10080A8BC, symSize: 0x0 }
+  - { offset: 0x2D63, size: 0x8, addend: 0x0, symName: __Z10init_tracePc, symObjAddr: 0x800, symBinAddr: 0x100003ADC, symSize: 0x124 }
+  - { offset: 0x2D79, size: 0x8, addend: 0x0, symName: __MergedGlobals, symObjAddr: 0x8066EC, symBinAddr: 0x10080A8BC, symSize: 0x0 }
+  - { offset: 0x2D86, size: 0x8, addend: 0x0, symName: __Z9read_bytev, symObjAddr: 0x0, symBinAddr: 0x1000032DC, symSize: 0x94 }
+  - { offset: 0x2DEB, size: 0x8, addend: 0x0, symName: __Z9read_uintv, symObjAddr: 0x94, symBinAddr: 0x100003370, symSize: 0x1BC }
+  - { offset: 0x2EDD, size: 0x8, addend: 0x0, symName: __Z8init_rasv, symObjAddr: 0x250, symBinAddr: 0x10000352C, symSize: 0x10 }
+  - { offset: 0x2EF0, size: 0x8, addend: 0x0, symName: __Z8push_rasj, symObjAddr: 0x260, symBinAddr: 0x10000353C, symSize: 0x24 }
+  - { offset: 0x2F0B, size: 0x8, addend: 0x0, symName: __Z7pop_rasv, symObjAddr: 0x284, symBinAddr: 0x100003560, symSize: 0x30 }
+  - { offset: 0x2F1E, size: 0x8, addend: 0x0, symName: __Z16predict_rememberv, symObjAddr: 0x2B4, symBinAddr: 0x100003590, symSize: 0x18 }
+  - { offset: 0x2F44, size: 0x8, addend: 0x0, symName: __Z15update_rememberR8rememberPS_bi, symObjAddr: 0x2CC, symBinAddr: 0x1000035A8, symSize: 0xF0 }
+  - { offset: 0x305A, size: 0x8, addend: 0x0, symName: __Z10read_tracev.cold.2, symObjAddr: 0x988, symBinAddr: 0x100003CCC, symSize: 0x28 }
+  - { offset: 0x3071, size: 0x8, addend: 0x0, symName: __Z10read_tracev.cold.1, symObjAddr: 0x930, symBinAddr: 0x100003C74, symSize: 0x58 }
+  - { offset: 0x3088, size: 0x8, addend: 0x0, symName: __Z10init_tracePc, symObjAddr: 0x800, symBinAddr: 0x100003ADC, symSize: 0x124 }
+  - { offset: 0x31FA, size: 0x8, addend: 0x0, symName: __Z10init_tracePc.cold.1, symObjAddr: 0x9B0, symBinAddr: 0x100003CF4, symSize: 0x14 }
+  - { offset: 0x3211, size: 0x8, addend: 0x0, symName: __Z9end_tracev, symObjAddr: 0x924, symBinAddr: 0x100003C00, symSize: 0xC }
+...
