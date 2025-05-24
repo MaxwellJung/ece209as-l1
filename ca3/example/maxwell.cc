@@ -6,12 +6,20 @@
 ////////////////////////////////////////////
 
 #include "../inc/champsim_crc2.h"
+#include <stdlib.h>
+#include <time.h>
 
 #define NUM_CORE 1
 #define LLC_SETS NUM_CORE*2048
 #define LLC_WAYS 16
+#define EPSILON 0.5f
 
 uint32_t lru[LLC_SETS][LLC_WAYS];
+
+float rng()
+{
+    return static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+}
 
 // initialize replacement state
 void InitReplacementState()
@@ -23,17 +31,21 @@ void InitReplacementState()
             lru[i][j] = j;
         }
     }
+
+    /* initialize random seed: */
+    srand(time(NULL));
 }
 
 // find replacement victim
 // return value should be 0 ~ 15 or 16 (bypass)
 uint32_t GetVictimInSet (uint32_t cpu, uint32_t set, const BLOCK *current_set, uint64_t PC, uint64_t paddr, uint32_t type)
 {
+    int victim = 0;
     for (int i=0; i<LLC_WAYS; i++)
-        if (lru[set][i] == (LLC_WAYS-1))
-            return i;
+        if (lru[set][i] > lru[set][victim])
+            victim = i;
 
-    return 0;
+    return victim;
 }
 
 // called on every cache hit and cache fill
@@ -41,7 +53,7 @@ void UpdateReplacementState (uint32_t cpu, uint32_t set, uint32_t way, uint64_t 
 {
     // update lru replacement state
     for (uint32_t i=0; i<LLC_WAYS; i++) {
-        if (lru[set][i] < lru[set][way]) {
+        if (lru[set][i] < LLC_WAYS-1) {
             lru[set][i]++;
 
             if (lru[set][i] == LLC_WAYS)
