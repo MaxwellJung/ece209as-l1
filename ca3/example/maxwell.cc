@@ -12,7 +12,7 @@
 #define NUM_CORE 1
 #define LLC_SETS NUM_CORE*2048
 #define LLC_WAYS 16
-#define EPSILON 0.5f
+#define EPSILON 1.0f
 
 uint32_t lru[LLC_SETS][LLC_WAYS];
 
@@ -60,7 +60,11 @@ void UpdateReplacementState (uint32_t cpu, uint32_t set, uint32_t way, uint64_t 
                 assert(0);
         }
     }
-    lru[set][way] = 0; // promote to the MRU position
+    if (hit) lru[set][way] = 0; // promote to the MRU position on hit
+    else { // randomly insert at MRU or LRU
+        if (rng() <= EPSILON) lru[set][way] = 0;
+        else lru[set][way] = LLC_WAYS-1;
+    }
 }
 
 // use this function to print out your own stats on every heartbeat 
