@@ -1,0 +1,2 @@
+bin/usimm input/1channel.cfg input/comm1 input/comm2 > output/c1-c2-1 
+bin/usimm input/1channel.cfg input/black input/freq > output/bl-fr-1 
